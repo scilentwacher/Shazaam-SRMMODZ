@@ -2,14 +2,15 @@ import os
 from dotenv import load_dotenv
 import json
 
-# Load environment variables from .env file
 load_dotenv()
 
 class Config:
     DATABASE_URL = os.getenv("DATABASE_URL")
     SECRET = os.getenv("SECRET")
     TOKEN = os.getenv("TOKEN")
+    ADMIN = int(os.getenv("ADMIN", "0"))
 
+    # ...rest of your settings...
     # Control whether to allow downloading from generic/less popular sources
     IS_GENERIC_URL_OK = False
 
