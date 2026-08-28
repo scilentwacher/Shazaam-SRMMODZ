@@ -30,7 +30,7 @@ class Config:
     COOKIES_PATH = None
     
     # Telegram Admin User ID (for bot management)
-    ADMIN = 8740947346  # Replace with actual admin ID
+    ADMIN = int(os.getenv("ADMIN", "0"))  # Replace with actual admin ID
 
     # Load default bot response texts from JSON
     with open(os.path.join("app", "data", "default_texts.json")) as f:
