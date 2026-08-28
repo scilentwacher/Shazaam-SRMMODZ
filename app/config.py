@@ -30,10 +30,7 @@ class Config:
     # Path for storing session cookies (if needed)
     COOKIES_PATH = None
     
-    # Telegram Admin User ID (for bot management)
-     # Replace with actual admin ID
-
-    # Load default bot response texts from JSON
+   # Load default bot response texts from JSON
     with open(os.path.join("app", "data", "default_texts.json")) as f:
         DEFAULT_TEXTS = json.load(f)
 
