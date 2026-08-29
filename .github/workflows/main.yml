@@ -31,7 +31,7 @@ jobs:
 
       - name: Create environment file
         run: |
-          echo "TOKEN=${{ secrets.BOT_TOKEN }}" > .env
+          echo "BOT_TOKEN=${{ secrets.BOT_TOKEN }}" > .env
 
       - name: Start Telegram bot
         run: |
