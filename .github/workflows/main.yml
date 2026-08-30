@@ -31,8 +31,12 @@ jobs:
 
       - name: Create environment file
         run: |
-          echo "BOT_TOKEN=${{ secrets.BOT_TOKEN }}" > .env
+          echo "TOKEN=${{ secrets.BOT_TOKEN }}" > .env
+
+      - name: Load environment variables
+        run: |
+          cat .env >> "$GITHUB_ENV"
 
       - name: Start Telegram bot
         run: |
-          python main.py
+          python main.py --polling
