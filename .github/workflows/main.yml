@@ -32,6 +32,7 @@ jobs:
       - name: Create environment file
         run: |
           echo "TOKEN=${{ secrets.BOT_TOKEN }}" > .env
+          echo "DATABASE_URL=sqlite+aiosqlite:///database.db" >> .env
 
       - name: Load environment variables
         run: |
